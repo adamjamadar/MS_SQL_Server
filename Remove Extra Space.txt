@@ -1,4 +1,4 @@
-declare @string varchar(50)='   adam  jam adar    pune ja';
+declare @string varchar(50)='   adam  jam adar    pune ja  adam';
 while charindex('  ',@string)>0
 begin
 set @string = replace(@string,'  ',' ')
