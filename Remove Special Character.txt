@@ -1,0 +1,10 @@
+declare @string varchar(50)='@adam$^jamadar1010@*& ada*m'
+declare @index int;
+while PATINDEX('%[^a-zA-Z0-9]%',@string)>0
+begin
+set @index = PATINDEX('%[^a-zA-Z0-9]%',@string);
+
+set @string = stuff(@string,@index,1,'')
+end
+select @index;
+select @string as removecharacter

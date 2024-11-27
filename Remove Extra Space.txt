@@ -1,0 +1,8 @@
+declare @string varchar(50)='   adam  jam adar    pune ja';
+while charindex('  ',@string)>0
+begin
+set @string = replace(@string,'  ',' ')
+end
+select @string
+select ltrim(rtrim(@string))
+
